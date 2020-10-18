@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ext=".cc"
+mkdir -p $1 && cp templates/template$ext $1/$1$ext && echo "created " $1/$1$ext && vim $1/$1$ext 

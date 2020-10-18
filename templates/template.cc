@@ -13,7 +13,14 @@ void read_many(int n, vector<T>& v){
   }
 }
 
+template <class T>
+void read_matrix(int m, int n, vector <vector <T> >& v) {
+  for (int i = 0; i < m; ++i) {
+    vector<T> vi;
+    read_many(n, vi);
+    v.push_back(vi);
+  }
+}
+
 int main() {
-  int n;
-  cin >> n;
 }
