@@ -1,0 +1,24 @@
+def rec(arr, num, goal):
+  if num == goal:
+    arr.append(num)
+    return arr
+  elif num < goal:
+    arr.append(num)
+    return rec(arr, num-1, goal-num)
+  else:
+    # num > goal
+    return rec(arr, goal, goal)
+
+n = input() |> int
+summation = n*(n+1)//2
+if summation % 2 == 1:
+  print("NO")
+else:
+  print("YES")
+  sol = rec([], n, summation//2) |> set
+  print(len(sol))
+  map(str, sol) |> ' '.join |> print
+  sol = range(1, n+1) |> filter$(x -> x not in sol) |> list
+  print(len(sol))
+  map(str, sol) |> ' '.join |> print
+  

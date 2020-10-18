@@ -1,0 +1,6 @@
+n = input() |> int
+count, divisor = 0, 5
+while (n/divisor) >= 1:
+  count += n//divisor
+  divisor *= 5
+print(count)
